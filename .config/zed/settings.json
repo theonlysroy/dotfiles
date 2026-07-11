@@ -1,0 +1,205 @@
+{
+  // "diagnostics_max_severity": "off",
+  "cli_default_open_behavior": "existing_window",
+  "git": {
+    "enable_diff": true,
+    "inline_blame": {
+      "show_commit_summary": true
+    },
+    "disable_git": false
+  },
+  "auto_update": false,
+  "extend_comment_on_newline": false,
+  "edit_predictions": {
+    "provider": "none",
+    "mode": "subtle",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "default_model": {
+      "provider": "openrouter",
+      "model": "qwen/qwen3.5-35b-a3b",
+      "enable_thinking": true,
+    },
+    "dock": "right",
+    "favorite_models": [
+      {
+        "provider": "openrouter",
+        "model": "z-ai/glm-5.1",
+        "enable_thinking": true
+      },
+      {
+        "provider": "openrouter",
+        "model": "z-ai/glm-5.2",
+        "enable_thinking": true
+      },
+      {
+        "provider": "openrouter",
+        "model": "nvidia/nemotron-3-ultra-550b-a55b",
+        "enable_thinking": true
+      },
+      {
+        "provider": "openrouter",
+        "model": "moonshotai/kimi-k2.7-code",
+        "enable_thinking": true
+      },
+      {
+        "provider": "openrouter",
+        "model": "qwen/qwen3.5-35b-a3b",
+        "enable_thinking": true
+      },
+      {
+        "provider": "openrouter",
+        "model": "deepseek/deepseek-v4-flash",
+        "enable_thinking": true
+      },
+      {
+        "provider": "openrouter",
+        "model": "minimax/minimax-m2.7",
+        "enable_thinking": true
+      }
+    ],
+    "model_parameters": [],
+  },
+  "project_panel": {
+    "git_status_indicator": true,
+    "dock": "left",
+  },
+  "mouse_wheel_zoom": true,
+  "toolbar": {
+    "breadcrumbs": false,
+    "agent_review": false,
+    "code_actions": false,
+    "quick_actions": false,
+    "selections_menu": false,
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "vim_mode": true,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "base_keymap": "VSCode",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Material Icon Theme",
+    "dark": "Zed (Default)",
+  },
+  "ui_font_size": 15.0,
+  "buffer_font_size": 14,
+  "buffer_font_family": "Maple Mono",
+  // "buffer_font_family": "Red Hat Mono",
+  // "buffer_font_features": {
+  //   "calt": true,
+  // },
+  "terminal": {
+    "font_size": 14,
+  },
+  "buffer_line_height": {
+    "custom": 2.2,
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Min Dark (Solid)",
+  },
+  "soft_wrap": "editor_width",
+  "scrollbar": {
+    "show": "never",
+  },
+  "autosave": "off",
+  "show_whitespaces": "boundary",
+  "restore_on_file_reopen": false,
+  "file_scan_exclusions": [
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/.repo",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+  ],
+  "experimental.theme_overrides": {
+    "syntax": {
+      "exception": {
+        "font_style": "italic",
+      },
+      "type.function": {
+        "font_style": "italic",
+      },
+      "function.method": {
+        "font_style": "italic",
+      },
+      "comment": {
+        "font_style": "italic",
+      },
+      "keyword": {
+        "font_style": "italic",
+      },
+      "string": {
+        "font_style": "italic",
+      },
+      "keyword.conditional": {
+        "font_style": "italic",
+      },
+      "keyword.coroutine": {
+        "font_style": "italic",
+      },
+      "keyword.repeat": {
+        "font_style": "italic",
+      },
+      "keyword.exception": {
+        "font_style": "italic",
+      },
+      "keyword.operator": {
+        "font_style": "italic",
+      },
+      "string.escape": {
+        "font_style": "italic",
+      },
+      "boolean": {
+        "font_style": "italic",
+      },
+      "constant": {
+        "font_style": "italic",
+      },
+      "punctuation.special": {
+        "font_style": "italic",
+      },
+      "number": {
+        "font_style": "italic",
+      },
+      "type": {
+        "font_style": "italic",
+      },
+      "variable.builtin": {
+        "font_style": "italic",
+      },
+      "variable.parameter": {
+        "font_style": "italic",
+      },
+    },
+  },
+  "formatter": "prettier",
+  "languages": {
+    "JavaScript": {
+      "formatter": "prettier",
+    },
+    "TypeScript": {
+      "formatter": "prettier",
+    },
+    "TSX": { "formatter": "prettier" },
+    "JSON": { "formatter": "prettier" },
+    "JSONC": { "formatter": "prettier" },
+  },
+  // "auto_update": false,
+}
