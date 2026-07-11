@@ -1,0 +1,11 @@
+user-theme@gnome-shell-extensions.gcampax.github.com
+status-area-horizontal-spacing@mathematical.coffee.gmail.com
+rounded-window-corners@fxgn
+search-light@icedman.github.com
+ding@rastersoft.com
+snapd-prompting@canonical.com
+snapd-search-provider@canonical.com
+tiling-assistant@ubuntu.com
+ubuntu-appindicators@ubuntu.com
+ubuntu-dock@ubuntu.com
+web-search-provider@ubuntu.com
