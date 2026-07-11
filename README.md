@@ -2,6 +2,10 @@
 
 All applications, system and shell configurations.
 
+## Wallpaper
+
+Wallhaven - image id: `1qkzkv`
+
 ## Included applications
 
 - **Zed**
