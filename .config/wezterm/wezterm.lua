@@ -17,10 +17,10 @@ config.colors = {
 config.enable_wayland = true
 config.window_decorations = "NONE"
 config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.90
 config.tab_bar_at_bottom = true
-config.initial_cols = 140
-config.initial_rows = 30
+config.initial_cols = 160
+config.initial_rows = 35
 config.adjust_window_size_when_changing_font_size = false
 config.window_padding = {
     left = "16px",
@@ -33,8 +33,10 @@ config.color_scheme = "Black Metal (base16)"
 -- config.color_scheme = "Default (dark)"
 config.scrollback_lines = 5000
 config.default_cursor_style = "BlinkingBlock"
-config.cursor_blink_ease_in = "Constant"
+ config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
+ config.cursor_blink_rate = 600
+-- config.force_reverse_video_cursor = true
 config.audible_bell = "Disabled"
 
 -- Cloud VMS, EC2, local server (ssh) specific configs
