@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 -- Font settings
 config.font_size = 11
 config.line_height = 1.2
-config.font = wezterm.font("Maple Mono")
+config.font = wezterm.font("Maple Mono", {weight = "Regular"})
 
 -- Colors
 config.colors = {
@@ -28,7 +28,8 @@ config.window_padding = {
     top = "16px",
     bottom = "16px"
 }
-config.color_scheme = "Default (dark) (terminal.sexy)"
+config.color_scheme = "Black Metal (base16)"
+-- config.color_scheme = "Default (dark) (terminal.sexy)"
 -- config.color_scheme = "Default (dark)"
 config.scrollback_lines = 5000
 config.default_cursor_style = "BlinkingBlock"
