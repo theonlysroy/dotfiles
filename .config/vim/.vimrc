@@ -70,3 +70,8 @@ endfunction
 
 " Map Ctrl+P to run the plugin-free function in Normal mode
 nnoremap <silent> <C-p> :call FzfOpenFileInNewTab()<CR>
+
+" Insert bash code block in Insert mode using Ctrl+B
+inoremap <C-b> ```bash<CR><CR>```<Esc>ki
+" inoremap <C-b> ```bash<CR><CR>```<Esc>O
+" inoremap <C-b> <C-o>my<CR>```<Esc>`yi```bash<CR>
