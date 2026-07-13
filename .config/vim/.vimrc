@@ -1,7 +1,8 @@
 filetype plugin indent on
 syntax on
 
-set nu
+" set nu
+set relativenumber
 
 " Status line
 set laststatus=2
