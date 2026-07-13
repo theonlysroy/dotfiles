@@ -72,6 +72,16 @@ endfunction
 nnoremap <silent> <C-p> :call FzfOpenFileInNewTab()<CR>
 
 " Insert bash code block in Insert mode using Ctrl+B
-inoremap <C-b> ```bash<CR><CR>```<Esc>ki
-" inoremap <C-b> ```bash<CR><CR>```<Esc>O
-" inoremap <C-b> <C-o>my<CR>```<Esc>`yi```bash<CR>
+function! InsertBashBlock()
+  let indent = matchstr(getline('.'), '^\s*')
+  let [saved_ai, saved_si, saved_ci] = [&autoindent, &smartindent, &cindent]
+  setlocal noautoindent nosmartindent nocindent
+  let text = '```bash' . "\n" . indent . "\n" . indent . '```'
+  execute 'normal! a' . text
+  let [&autoindent, &smartindent, &cindent] = [saved_ai, saved_si, saved_ci]
+  normal! k
+  startinsert!
+endfunction
+
+inoremap <C-b> <Esc>:call InsertBashBlock()<CR>
+
