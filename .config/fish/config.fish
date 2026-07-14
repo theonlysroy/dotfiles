@@ -3,6 +3,9 @@ set -U __fish_git_prompt_showdirtystate 1
 set -U __fish_git_prompt_showuntrackedfiles 1
 set -U __fish_git_prompt_showupstream auto
 
+# local bin
+fish_add_path "$HOME/.local/bin"
+
 # aliases
 alias aud="sudo apt update"
 alias aug="sudo apt upgrade"
