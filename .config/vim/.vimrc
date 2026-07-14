@@ -1,6 +1,13 @@
 filetype plugin indent on
 syntax on
 
+" markdown files indentation
+autocmd FileType markdown setlocal indentexpr=
+
+" set scrolloff to keep a minimum number of screen lines visible
+" above and below the cursor all times
+set scrolloff=15
+
 " set nu
 set relativenumber
 
