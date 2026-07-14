@@ -20,6 +20,7 @@ alias py="python3"
 alias dfn="df -H | grep nvme"
 alias dft="df -H --total | grep total"
 alias t="tmux"
+alias g="git"
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
