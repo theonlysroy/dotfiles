@@ -5,6 +5,8 @@ set -U __fish_git_prompt_showupstream auto
 
 # local bin
 fish_add_path "$HOME/.local/bin"
+fish_add_path "$HOME/.local/bin/scripts"
+# set -gx PATH $PATH $HOME/.local/bin/scripts
 
 # aliases
 alias aud="sudo apt update"
