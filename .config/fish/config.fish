@@ -24,6 +24,7 @@ alias dfn="df -H | grep nvme"
 alias dft="df -H --total | grep total"
 alias t="tmux"
 alias g="git"
+alias ntask="vim $HOME/Tasks/planner.md"
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
