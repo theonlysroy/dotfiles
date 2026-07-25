@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# ================================================================
+# mkplans
+# A shell utitility to create a md file for daily planner docs
+# just like a daily note - 
+# created with timestamps and a frontmatter (date, type)
+# ================================================================
+
+# set target planner directory
+PLANNER_DIR="$HOME/Tasks"
+
+# check if the target directory is available
+# if not create it
+if [ ! -d $PLANNER_DIR ]; then
+	mkdir -p "$PLANNER_DIR"	
+fi
+
+
+# create the file with following checks
+#  - if the file with timestamp already exists, open that
+#  - if "-ow" or "--overwrite" flag passed, remove the file
+FILE_NAME="$PLANNER_DIR/planner_$(date +%d-%m-%Y).md"
+
+touch $FILE_NAME
+cat <<EOF > "$FILE_NAME"
+---
+Date: $(date +%d-%m-%Y)
+Type: Daily Tasks
+---
+EOF
+
+# open the file in vim
+vim $FILE_NAME
