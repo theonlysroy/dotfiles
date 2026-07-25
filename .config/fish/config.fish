@@ -25,8 +25,10 @@ alias py="python3"
 alias dfn="df -H | grep nvme"
 alias dft="df -H --total | grep total"
 alias t="tmux"
+alias tatt="tmux attach"
 alias g="git"
 alias ntask="vim $HOME/Tasks/planner.md"
+alias dockerstart="sudo systemctl restart docker"
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
