@@ -2,3 +2,4 @@
 .DS_Store
 *.log
 fish_variables
+.config/fish/completions
