@@ -31,6 +31,7 @@ alias tasks="cd $HOME/Tasks"
 alias dockerstart="sudo systemctl restart docker"
 alias ff="fastfetch"
 alias ff2="fastfetch --config $HOME/.config/fastfetch/config2.jsonc"
+alias dots="cd $HOME/dotfiles"
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
