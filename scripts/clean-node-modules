@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Usage:
+#   ./clean-node-modules.sh /path/to/directory
+
+if [[ $# -ne 1 ]]; then
+    echo "Usage: $0 <directory>"
+    exit 1
+fi
+
+BASE_DIR="$1"
+
+if [[ ! -d "$BASE_DIR" ]]; then
+    echo "Error: '$BASE_DIR' is not a directory."
+    exit 1
+fi
+
+BASE_DIR="$(realpath "$BASE_DIR")"
+
+declare -a NODE_MODULES=()
+
+echo "Scanning: $BASE_DIR"
+echo
+
+# Recursively find directories named node_modules.
+#
+# -prune is important:
+# Once node_modules is found, find will NOT descend into it.
+#
+# Example:
+#   project/node_modules/package-a/node_modules
+#
+# The nested node_modules will NOT be scanned because the
+# parent node_modules has already been pruned.
+while IFS= read -r -d '' node_modules; do
+    NODE_MODULES+=("$node_modules")
+done < <(
+    find "$BASE_DIR" \
+        -type d \
+        -name "node_modules" \
+        -prune \
+        -print0
+)
+
+if [[ ${#NODE_MODULES[@]} -eq 0 ]]; then
+    echo "No node_modules directories found."
+    exit 0
+fi
+
+echo "Found ${#NODE_MODULES[@]} node_modules directories:"
+echo
+
+for node_modules in "${NODE_MODULES[@]}"; do
+    SIZE=$(du -sh "$node_modules" 2>/dev/null | awk '{print $1}')
+    printf "  %-8s %s\n" "$SIZE" "$node_modules"
+done
+
+echo
+echo "----------------------------------------"
+echo "Total directories: ${#NODE_MODULES[@]}"
+echo "----------------------------------------"
+echo
+
+read -r -p "Delete ALL of the above node_modules directories? [y/N]: " CONFIRM
+
+case "$CONFIRM" in
+    y|Y|yes|YES)
+        echo
+        echo "Deleting..."
+
+        for node_modules in "${NODE_MODULES[@]}"; do
+            echo "  Removing: $node_modules"
+            rm -rf -- "$node_modules"
+        done
+
+        echo
+        echo "Cleanup completed."
+        ;;
+
+    *)
+        echo
+        echo "Deletion cancelled. Nothing was removed."
+        ;;
+esac
