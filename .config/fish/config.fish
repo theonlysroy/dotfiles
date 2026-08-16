@@ -6,6 +6,7 @@ set -U __fish_git_prompt_showupstream auto
 # local bin
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/.local/bin/scripts"
+fish_add_path "$HOME/go/bin"
 # set -gx PATH $PATH $HOME/.local/bin/scripts
 
 # aliases

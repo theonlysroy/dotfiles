@@ -69,10 +69,10 @@
   },
   "ui_font_size": 15.0,
   "buffer_font_size": 14,
-  "buffer_font_family": "Maple Mono",
+  "buffer_font_family": "Maple Mono NF",
   "terminal": {
     "scrollbar": {
-      "show": "auto"
+      "show": "auto",
     },
     "font_size": 14,
   },
