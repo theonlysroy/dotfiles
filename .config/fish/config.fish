@@ -34,6 +34,7 @@ alias ff="fastfetch"
 alias ff2="fastfetch --config $HOME/.config/fastfetch/config2.jsonc"
 alias dots="cd $HOME/dotfiles"
 alias bat="batcat"
+alias learnlab="cd $HOME/Lab/Learn_In_Lab"
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
@@ -54,3 +55,6 @@ set --export ANDROID_HOME "$HOME/android_sdk"
 set --export PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
 set --export PATH $ANDROID_HOME/platform-tools $PATH
 set --export PATH $ANDROID_HOME/emulator $PATH
+
+# kimi-code
+fish_add_path -g "/home/sroy/.kimi-code/bin"
