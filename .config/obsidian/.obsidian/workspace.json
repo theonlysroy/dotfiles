@@ -1,0 +1,237 @@
+{
+  "main": {
+    "id": "d0a6f312155c9eb4",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb6506c24375e52a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41d69a21cf2d2415",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00 Learning Hub.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00 Learning Hub"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ed23a37a166aff9c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ca3a737845b5648f",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "34f23ff502c859bf",
+    "type": "split",
+    "children": [
+      {
+        "id": "4bb27a5f4bc53ab7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c1d927418339f42",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "aad31f899a34076a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b65331aa73dbc3a5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 248.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "6fdbe925da51ce30",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab70b5e9c56496d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ea871ce874101ce",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "a44eb0385a3818c1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "devops/monitoring/Prometheus - Node.js Lab.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Prometheus - Node.js Lab"
+            }
+          },
+          {
+            "id": "789b8b9b45a75e70",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1ed6e31fed85649e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "3cd878edf59b6816",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "devops/monitoring/Prometheus - Node.js Lab.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Prometheus - Node.js Lab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": true,
+      "graph:Open graph view": true,
+      "canvas:Create new canvas": true,
+      "daily-notes:Open today's daily note": true,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": true,
+      "bases:Create new base": true
+    }
+  },
+  "active": "ca3a737845b5648f",
+  "lastOpenFiles": [
+    "00 Learning Hub.md",
+    "system-design/web crawler from scratch.md",
+    "system-design/Inference API for serving LLM models.md",
+    "system-design/stack sampling profiler output into trace events.md",
+    "system-design/payment, subscription, autopay, cancel.md",
+    "Topics/error handling.md",
+    "Topics/thread safety.md",
+    "system-design/Design Task Manager.md",
+    "system-design/LRU cache.md",
+    "system-design/in memory database with basic SQL commands.md",
+    "system-design/webhook delivery system.md",
+    "system-design",
+    "Topics/SOS Alerts.md",
+    "Topics/Nginx - Local Virtual Hosts.md",
+    "Topics/Go-topics.md",
+    "Projects.md",
+    "Labs/Nginx - Local Virtual Host Practice.md",
+    "00 Workflow Guide.md",
+    "devops/monitoring/Prometheus - Node.js Lab.md",
+    "Topics",
+    "devops/monitoring/Prometheus - Application Metrics.md",
+    "devops/monitoring/Prometheus - Key Terms.md",
+    "devops/monitoring",
+    "devops",
+    "Labs/<Topic> - Lab.md",
+    "99 Templates/Topic.md",
+    "Labs",
+    "99 Templates/Review.md",
+    "99 Templates/Quiz.md",
+    "99 Templates/Lab.md",
+    "99 Templates/Interview.md",
+    "99 Templates"
+  ]
+}

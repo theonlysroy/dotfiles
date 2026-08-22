@@ -1,0 +1,11 @@
+{
+  "textFontFamily": "JetBrainsMono Nerd Font Mono,Maple Mono NF",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font Mono,Maple Mono NF",
+  "baseFontSize": 16,
+  "showViewHeader": false,
+  "showRibbon": false,
+  "theme": "obsidian",
+  "accentColor": "",
+  "cssTheme": "Minimal",
+  "baseFontSizeAction": true
+}
