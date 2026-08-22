@@ -34,13 +34,8 @@
     },
     "break",
     {
-      "type": "host",
-      "key": "╭─󰌢",
-      "keyColor": "green",
-    },
-    {
       "type": "cpu",
-      "key": "├─󰻠",
+      "key": "╭─󰻠",
       "keyColor": "green",
     },
     {
