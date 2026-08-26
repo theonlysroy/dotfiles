@@ -10,6 +10,7 @@
       "ctrl-c": "editor::Copy",
       "ctrl-f": "buffer_search::Deploy",
       "ctrl-b": "workspace::ToggleLeftDock",
+      "ctrl-z": "editor::Undo",
     },
   },
   {
@@ -18,7 +19,7 @@
       "ctrl-alt-b": "workspace::ToggleRightDock",
       "ctrl-b": "workspace::ToggleLeftDock",
       "ctrl-`": "terminal_panel::ToggleFocus",
-      "ctrl-1": "workspace::ActivatePaneLeft",
+      "ctrl-1": "editor::ToggleFocus",
       "ctrl-2": "workspace::ActivatePaneRight",
       "ctrl-3": "workspace::ActivatePaneUp",
       "ctrl-4": "workspace::ActivatePaneDown",
@@ -27,13 +28,13 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "workspace::ToggleBottomDock"
-    }
+      "ctrl-`": "workspace::ToggleBottomDock",
+    },
   },
   {
     "context": "Workspace",
     "unbind": {
-      "ctrl-j": "workspace::ToggleBottomDock"
-    }
-  }
+      "ctrl-j": "workspace::ToggleBottomDock",
+    },
+  },
 ]

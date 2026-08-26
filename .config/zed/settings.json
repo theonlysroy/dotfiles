@@ -69,7 +69,8 @@
   },
   "ui_font_size": 15.0,
   "buffer_font_size": 14,
-  "buffer_font_family": "Maple Mono NF",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  // "buffer_font_family": "Maple Mono NF",
   "terminal": {
     "scrollbar": {
       "show": "auto",
@@ -170,8 +171,20 @@
     },
     "TypeScript": {
       "formatter": "prettier",
+      "language_servers": [
+        "typescript-ls",
+        "!vtsls",
+        "!typescript-language-servers",
+      ],
     },
-    "TSX": { "formatter": "prettier" },
+    "TSX": {
+      "formatter": "prettier",
+      "language_servers": [
+        "typescript-ls",
+        "!vtsls",
+        "!typescript-language-server",
+      ],
+    },
     "JSON": { "formatter": "prettier" },
     "JSONC": { "formatter": "prettier" },
   },
