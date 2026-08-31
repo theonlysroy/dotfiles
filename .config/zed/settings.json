@@ -187,5 +187,13 @@
     },
     "JSON": { "formatter": "prettier" },
     "JSONC": { "formatter": "prettier" },
+    "Go": {
+      "hard_tabs": false,
+      "code_actions_on_format": {
+        "source.organizeImports": true,
+      },
+      // "format_on_save": ""
+      "debuggers": ["Delve"],
+    },
   },
 }
