@@ -44,7 +44,7 @@ set --export PATH $BUN_INSTALL/bin $PATH
 set --export NVM_DIR $HOME/.nvm
 
 # opencode
-fish_add_path "$HOME/.opencode/bin"
+# fish_add_path "$HOME/.opencode/bin"
 
 # java
 set --export JAVA_HOME "/usr/lib/jvm/java-21-openjdk-amd64"
@@ -57,4 +57,4 @@ set --export PATH $ANDROID_HOME/platform-tools $PATH
 set --export PATH $ANDROID_HOME/emulator $PATH
 
 # kimi-code
-fish_add_path -g "/home/sroy/.kimi-code/bin"
+# fish_add_path -g "/home/sroy/.kimi-code/bin"

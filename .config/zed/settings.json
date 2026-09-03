@@ -192,7 +192,8 @@
       "code_actions_on_format": {
         "source.organizeImports": true,
       },
-      // "format_on_save": ""
+      "format_on_save": "off",
+      "formatter": "language_server",
       "debuggers": ["Delve"],
     },
   },
