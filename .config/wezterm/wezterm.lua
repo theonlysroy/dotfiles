@@ -3,9 +3,10 @@ local commands = require("commands")
 local config = wezterm.config_builder()
 
 -- Font settings
-config.font_size = 11
+config.font_size = 10
 config.line_height = 1.2
-config.font = wezterm.font("Maple Mono", {weight = "Regular"})
+config.font = wezterm.font("JetBrainsMono Nerd Font", {weight = "Regular"})
+-- config.font = wezterm.font("Maple Mono", {weight = "Regular"})
 
 -- Colors
 config.colors = {
