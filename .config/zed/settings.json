@@ -69,15 +69,17 @@
     "dark": "Zed (Default)",
   },
   "ui_font_size": 15.0,
-  "buffer_font_size": 14,
-  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-  // "buffer_font_family": "Maple Mono NF",
+  "buffer_font_size": 13,
+  // "buffer_font_family": "Red Hat Mono",
+  // "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_family": "Maple Mono NF",
   "terminal": {
     "font_family": "Maple Mono NF",
+    // "font_family": "Red Hat Mono",
     "scrollbar": {
       "show": "auto",
     },
-    "font_size": 14,
+    "font_size": 12,
   },
   "buffer_line_height": {
     "custom": 2.2,
