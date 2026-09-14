@@ -16,9 +16,9 @@
   {
     "context": "Workspace",
     "bindings": {
+      "ctrl-`": "terminal_panel::ToggleFocus",
       "ctrl-alt-b": "workspace::ToggleRightDock",
       "ctrl-b": "workspace::ToggleLeftDock",
-      "ctrl-`": "terminal_panel::ToggleFocus",
       "ctrl-1": "editor::ToggleFocus",
       "ctrl-2": "workspace::ActivatePaneRight",
       "ctrl-3": "workspace::ActivatePaneUp",
@@ -28,13 +28,13 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "workspace::ToggleBottomDock",
+      // "ctrl-`": "workspace::ToggleBottomDock",
     },
   },
   {
     "context": "Workspace",
     "unbind": {
-      "ctrl-j": "workspace::ToggleBottomDock",
+      // "ctrl-j": "workspace::ToggleBottomDock",
     },
   },
 ]
