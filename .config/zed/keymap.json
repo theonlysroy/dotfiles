@@ -11,12 +11,13 @@
       "ctrl-f": "buffer_search::Deploy",
       "ctrl-b": "workspace::ToggleLeftDock",
       "ctrl-z": "editor::Undo",
+      "ctrl-`": "workspace::ToggleBottomDock",
     },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "terminal_panel::ToggleFocus",
+      // "ctrl-`": "terminal_panel::ToggleFocus",
       "ctrl-alt-b": "workspace::ToggleRightDock",
       "ctrl-b": "workspace::ToggleLeftDock",
       "ctrl-1": "editor::ToggleFocus",
@@ -34,7 +35,7 @@
   {
     "context": "Workspace",
     "unbind": {
-      // "ctrl-j": "workspace::ToggleBottomDock",
+      "ctrl-j": "workspace::ToggleBottomDock",
     },
   },
 ]
