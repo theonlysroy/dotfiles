@@ -11,7 +11,7 @@
       "ctrl-f": "buffer_search::Deploy",
       "ctrl-b": "workspace::ToggleLeftDock",
       "ctrl-z": "editor::Undo",
-      "ctrl-`": "workspace::ToggleBottomDock",
+      // "ctrl-`": "workspace::ToggleBottomDock",
     },
   },
   {
@@ -35,7 +35,7 @@
   {
     "context": "Workspace",
     "unbind": {
-      "ctrl-j": "workspace::ToggleBottomDock",
+      // "ctrl-j": "workspace::ToggleBottomDock",
     },
   },
 ]
