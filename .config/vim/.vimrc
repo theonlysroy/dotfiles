@@ -92,3 +92,8 @@ endfunction
 
 inoremap <C-b> <Esc>:call InsertBashBlock()<CR>
 
+" enable mouse support
+set mouse=a
+
+" directly use system clipboard
+set clipboard=unnamedplus
