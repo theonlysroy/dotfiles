@@ -4,10 +4,8 @@ echo "Cleaning up neovim cache and state..."
 
 rm -rf $HOME/.cache/nvim/
 rm -rf $HOME/.local/state/nvim/
-rm -rf $HOME/.local/share/nvim/site/queries/
-rm -rf $HOME/.local/share/nvim/site/parser/
-rm -rf $HOME/.config/nvim/lazy-lock.json
-rm -rf $HOME/.local/share/nvim/lazy/
+rm -rf $HOME/.local/share/nvim/
+rm -rf $HOME/.config/nvim
 
 sleep 2
 
