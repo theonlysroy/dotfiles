@@ -188,7 +188,7 @@ vim.g.netrw_liststyle = 3     -- tree view
 vim.g.netrw_winsize = 25      -- 25% width sidebar
 vim.g.netrw_browse_split = 0  -- open files in same window
 
-vim.keymap.set("n", "<leader>e", ":Lexplore %:p:h<CR>", { desc = "Toggle file explorer" })
+vim.keymap.set("n", "<leader>e", "<cmd>Lexplore<CR>", { desc = "Toggle file explorer" })
 
 -- ============================================================
 -- TERMINAL TOGGLE (built-in :terminal — no plugin)
