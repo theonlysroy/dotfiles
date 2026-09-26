@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+echo "Cleaning up neovim cache and state..."
+
+rm -rf $HOME/.cache/nvim/
+rm -rf $HOME/.local/state/nvim/
+rm -rf $HOME/.local/share/nvim/site/queries/
+rm -rf $HOME/.local/share/nvim/site/parser/
+rm -rf $HOME/.config/nvim/lazy-lock.json
+rm -rf $HOME/.local/share/nvim/lazy/
+
+sleep 2
+
+echo "Cleanup complete."
