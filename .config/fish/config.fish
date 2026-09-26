@@ -37,6 +37,7 @@ alias dots="cd $HOME/dotfiles"
 alias bat="batcat"
 alias learnlab="cd $HOME/Lab/Learn_In_Lab"
 alias formatss="magick golang-study-130926.png -bordercolor white -border 20x20 out.png"
+alias gr="go run ./main.go"
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
