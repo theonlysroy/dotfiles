@@ -50,3 +50,17 @@ map("n", "<leader>gt", ":w<CR>:split | terminal go test ./...<CR>", { silent = t
 -- Docker — basic build command
 map("n", "<leader>db", ":split | terminal docker build -t $(basename $(pwd)) .<CR>",
   { silent = true, desc = "Docker build" })
+
+-- focus between the editor and the explorer
+map("n", "<leader>o", function()
+  local view = require("nvim-tree.view")
+  if view.is_visible() then
+    if vim.bo.filetype == "NvimTree" then
+      vim.cmd("wincmd p")
+  else
+    vim.cmd("NvimTreeFocus")
+    end
+  end
+end,
+  { desc = "Toggle focus between explorer and editor" }
+)
