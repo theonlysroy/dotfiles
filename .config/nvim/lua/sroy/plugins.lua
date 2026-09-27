@@ -51,11 +51,22 @@ require("lazy").setup({
   },
 
   -- Fuzzy finder — single file, zero dependencies, needs ripgrep on PATH
-  -- {
-  --   "echasnovski/mini.pick",
-  --   version = false,
-  --   config = function()
-  --     require("mini.pick").setup()
-  --   end,
-  -- },
+  {
+    "echasnovski/mini.pick",
+    version = false,
+    config = function()
+      require("mini.pick").setup()
+    end,
+  },
+
+  -- Colorscheme
+  {
+    "datsfilipe/min-theme.nvim",
+    lazy = false,
+    priority = 1000, -- load before other plugins so colors are set immediately
+    config = function()
+      vim.o.background = "dark"
+      vim.cmd.colorscheme("min-theme")
+    end,
+  },
 })
