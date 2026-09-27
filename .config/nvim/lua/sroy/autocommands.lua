@@ -1,28 +1,22 @@
 
 local api = vim.api
 
--- Highlight on yank
-api.nvim_create_autocmd("TextYankPost", {
-	group = api.nvim_create_augroup("YankHighlight", { clear = true }),
-	callback = function()
-		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
-	end,
+-- Go: gofmt/gofumpt rewrite indentation to real tabs on every save
+api.nvim_create_autocmd("FileType", {
+  pattern = "go",
+  callback = function()
+    vim.bo.expandtab = false
+    vim.bo.shiftwidth = 2
+    vim.bo.tabstop = 2
+  end,
 })
 
--- Auto-resize splits on window resize
-api.nvim_create_autocmd("VimResized", {
-	group = api.nvim_create_augroup("WinResize", { clear = true }),
-	callback = function()
-		vim.cmd("wincmd =")
-	end,
-})
-
--- Remove trailing whitespace on save
-api.nvim_create_autocmd("BufWritePre", {
-	group = api.nvim_create_augroup("TrailingWs", { clear = true }),
-	pattern = "*",
-	callback = function()
-		local save = vim.fn.winsaveview()
-		vim.cmd([[%s/\s\+$//e]])
-	end,
+-- Makefile: real tab characters are a hard syntax requirement for recipe
+api.nvim_create_autocmd("FileType", {
+  pattern = "make",
+  callback = function()
+    vim.bo.expandtab = false
+    vim.bo.shiftwidth = 2
+    vim.bo.tabstop = 2
+  end,
 })

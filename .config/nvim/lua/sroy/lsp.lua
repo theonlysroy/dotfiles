@@ -1,9 +1,9 @@
 local lsp = vim.lsp
 
 lsp.enable({ "gopls", "dockerls" })
-
 vim.diagnostic.config({ virtual_text = true })
 
+-- native completion + LSP keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(ev)
     local client = lsp.get_client_by_id(ev.data.client_id)
@@ -26,6 +26,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 vim.cmd("set completeopt+=noselect")
 
+-- Go: format + organize imports on save
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.go",
   callback = function()

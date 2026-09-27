@@ -19,10 +19,8 @@ o.hlsearch = false
 -- Appearance
 o.signcolumn = "yes"
 o.cursorline = false
-o.termguicolors = true      -- needed for most colorschemes
 o.scrolloff = 8
 o.sidescrolloff = 8
-o.background = "dark"
 
 -- Behavior
 o.undofile = true            -- persistent undo
@@ -37,3 +35,15 @@ o.backup = false
 -- Netrw disable (we'll use nvim-tree instead)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- Filetype detection
+vim.filetype.add({
+  filename = {
+    ["Makefile"] = "make",
+    ["Dockerfile"] = "dockerfile",
+    ["go.work"] = "gowork",
+  },
+  pattern = {
+    ["Dockerfile.*"] = "dockerfile",
+  },
+})

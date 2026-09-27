@@ -1,36 +1,52 @@
--- Alias
 local map = vim.keymap.set
-local default_opts = {
-	noremap = true,
-	silent = true
-}
 
--- Better defaults
--- stay in visual mode after indent
-map("v", "<", "<gv", default_opts)
-map("v", ">", ">gv", default_opts)
+-- File explorer
+map("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true, desc = "Toggle file explorer" })
 
--- Move lines up/down in visual mode
-map("v", "J", ":m '>+1<CR>gv=gv", default_opts)
-map("v", "K", ":m '<-1<CR>gv=gv", default_opts)
+-- Fuzzy finder (mini.pick)
+-- map("n", "<leader>ff", ":Pick files<CR>", { silent = true, desc = "Find files" })
+-- map("n", "<leader>fb", ":Pick buffers<CR>", { silent = true, desc = "Find buffers" })
+-- map("n", "<leader>fg", ":Pick grep_live<CR>", { silent = true, desc = "Live grep" })
 
--- Center screen on half-page jumps
-map("n", "<C-d>", "<C-d>zz", default_opts)
-map("n", "<C-u>", "<C-u>zz", default_opts)
+-- Buffers (IDE-style open/close/cycle)
+map("n", "<leader>bn", ":bnext<CR>", { silent = true, desc = "Next buffer" })
+map("n", "<leader>bp", ":bprevious<CR>", { silent = true, desc = "Previous buffer" })
+map("n", "<leader>bd", ":bdelete<CR>", { silent = true, desc = "Close buffer" })
 
--- Window navigation
-map("n", "<C-h>", "<C-w>h", default_opts)
-map("n", "<C-j>", "<C-w>j", default_opts)
-map("n", "<C-k>", "<C-w>k", default_opts)
-map("n", "<C-l>", "<C-w>l", default_opts)
+-- Tabs
+map("n", "<leader>tn", ":tabnew<CR>", { silent = true, desc = "New tab" })
+map("n", "<leader>tc", ":tabclose<CR>", { silent = true, desc = "Close tab" })
+-- gt / gT already cycle tabs by default in Neovim — no remap needed.
 
--- Clear search highlight
-map("n", "<Esc>", ":nohlsearch<CR>", default_opts)
+-- Terminal (built-in :terminal, toggled bottom split)
+local term_buf, term_win = nil, nil
 
--- Keep paste buffer when pasting over selection
-map("x", "<leader>p", '"_dP', default_opts)
+local function toggle_terminal()
+  if term_win and vim.api.nvim_win_is_valid(term_win) then
+    vim.api.nvim_win_close(term_win, false)
+    term_win = nil
+    return
+  end
+  if term_buf and vim.api.nvim_buf_is_valid(term_buf) then
+    vim.cmd("botright 15split")
+    term_win = vim.api.nvim_get_current_win()
+    vim.api.nvim_win_set_buf(term_win, term_buf)
+  else
+    vim.cmd("botright 15split term://" .. vim.o.shell)
+    term_win = vim.api.nvim_get_current_win()
+    term_buf = vim.api.nvim_get_current_buf()
+  end
+  vim.cmd("startinsert")
+end
 
--- Buffer management
-map("n", "<leader>bd", ":bdelete<CR>", default_opts)
-map("n", "<leader>bn", ":bnext<CR>", default_opts)
-map("n", "<leader>bp", ":bprev<CR>", default_opts)
+map("n", "<leader>tt", toggle_terminal, { desc = "Toggle terminal" })
+map("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
+-- Go — basic commands
+map("n", "<leader>gr", ":w<CR>:split | terminal go run %<CR>", { silent = true, desc = "Go run current file" })
+map("n", "<leader>gb", ":w<CR>:split | terminal go build ./...<CR>", { silent = true, desc = "Go build" })
+map("n", "<leader>gt", ":w<CR>:split | terminal go test ./...<CR>", { silent = true, desc = "Go test" })
+
+-- Docker — basic build command
+map("n", "<leader>db", ":split | terminal docker build -t $(basename $(pwd)) .<CR>",
+  { silent = true, desc = "Docker build" })
