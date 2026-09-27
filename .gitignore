@@ -3,3 +3,4 @@
 *.log
 fish_variables
 .config/fish/completions
+lazy-lock.json
