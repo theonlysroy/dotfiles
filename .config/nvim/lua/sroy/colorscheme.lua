@@ -1,8 +1,8 @@
 
-vim.g.transparent_background = true
+-- vim.g.transparent_background = true
 
-vim.o.background = "dark"
-vim.cmd.colorscheme("habamax")
+-- vim.o.background = "dark"
+-- vim.cmd.colorscheme("habamax")
 -- vim.cmd.colorscheme("min-theme")
 
 local function apply_transparency()

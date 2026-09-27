@@ -4,9 +4,9 @@ local map = vim.keymap.set
 map("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true, desc = "Toggle file explorer" })
 
 -- Fuzzy finder (mini.pick)
--- map("n", "<leader>ff", ":Pick files<CR>", { silent = true, desc = "Find files" })
--- map("n", "<leader>fb", ":Pick buffers<CR>", { silent = true, desc = "Find buffers" })
--- map("n", "<leader>fg", ":Pick grep_live<CR>", { silent = true, desc = "Live grep" })
+map("n", "<leader>ff", ":Pick files<CR>", { silent = true, desc = "Find files" })
+map("n", "<leader>fb", ":Pick buffers<CR>", { silent = true, desc = "Find buffers" })
+map("n", "<leader>fg", ":Pick grep_live<CR>", { silent = true, desc = "Live grep" })
 
 -- Buffers (IDE-style open/close/cycle)
 map("n", "<leader>bn", ":bnext<CR>", { silent = true, desc = "Next buffer" })
