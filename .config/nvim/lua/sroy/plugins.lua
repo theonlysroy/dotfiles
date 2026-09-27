@@ -66,7 +66,25 @@ require("lazy").setup({
     priority = 1000, -- load before other plugins so colors are set immediately
     config = function()
       vim.o.background = "dark"
+      require("min-theme").setup({
+        transparent = vim.g.transparent_background,
+      })
       vim.cmd.colorscheme("min-theme")
+      
+      vim.api.nvim_create_user_command("ToggleTransparency", function()
+        vim.g.transparent_background = not vim.g.transparent_background
+        require("min-theme").setup({ transparent = vim.g.transparent_background })
+        vim.cmd.colorscheme("min-theme")
+	end, {})
     end,
+  },
+
+  -- autopairs
+  {
+   "windwp/nvim-autopairs",
+   event = "InsertEnter",
+   config = function()
+     require("nvim-autopairs").setup({})
+   end,
   },
 })

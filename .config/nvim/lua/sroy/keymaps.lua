@@ -42,6 +42,9 @@ end
 map("n", "<leader>tt", toggle_terminal, { desc = "Toggle terminal" })
 map("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
+-- toggle transparency
+map("n", "<leader>ub", ":ToggleTransparency<CR>", { desc = "Toggle background transparency" })
+
 -- Go — basic commands
 map("n", "<leader>gr", ":w<CR>:split | terminal go run %<CR>", { silent = true, desc = "Go run current file" })
 map("n", "<leader>gb", ":w<CR>:split | terminal go build ./...<CR>", { silent = true, desc = "Go build" })
