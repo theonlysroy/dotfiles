@@ -2,7 +2,7 @@
 
 All applications, system and shell configurations.
 
-![dotfiles-img](./assets/dotfiles-img.png)
+![dotfiles-img](./assets/terminal-ss.png)
 
 ## Wallpaper
 
