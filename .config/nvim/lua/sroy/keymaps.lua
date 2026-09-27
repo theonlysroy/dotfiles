@@ -1,52 +1,98 @@
 local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
 
--- File explorer
-map("n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true, desc = "Toggle file explorer" })
+--General
+map("n", "<Esc>",":nohlsearch<CR>",opts)
+map("n", "<leader>fs", ":w<CR>", { desc = "Save file" })
+map("n", "<leader>fq", ":q<CR>", { desc = "Quit" })
+map("n", "<leader>fQ", ":qa!<CR>", { desc = "Quit all" })
 
--- Fuzzy finder (mini.pick)
--- map("n", "<leader>ff", ":Pick files<CR>", { silent = true, desc = "Find files" })
--- map("n", "<leader>fb", ":Pick buffers<CR>", { silent = true, desc = "Find buffers" })
--- map("n", "<leader>fg", ":Pick grep_live<CR>", { silent = true, desc = "Live grep" })
+--Better movement
+-- Visual line movement when line wraps
+map("n", "j","gj", opts)
+map("n", "k","gk", opts)
+map("v", "j","gj", opts)
+map("v", "k","gk", opts)
 
--- Buffers (IDE-style open/close/cycle)
-map("n", "<leader>bn", ":bnext<CR>", { silent = true, desc = "Next buffer" })
-map("n", "<leader>bp", ":bprevious<CR>", { silent = true, desc = "Previous buffer" })
-map("n", "<leader>bd", ":bdelete<CR>", { silent = true, desc = "Close buffer" })
+-- Center screen on jumps
+map("n", "<C-d>", "<C-d>zz", opts)
+map("n", "<C-u>", "<C-u>zz", opts)
+map("n", "n", "nzzzv", opts)
+map("n", "N", "Nzzzv", opts)
 
--- Tabs
-map("n", "<leader>tn", ":tabnew<CR>", { silent = true, desc = "New tab" })
-map("n", "<leader>tc", ":tabclose<CR>", { silent = true, desc = "Close tab" })
--- gt / gT already cycle tabs by default in Neovim — no remap needed.
+-- Stay in visual mode after indent
+map("v", "<", "<gv", opts)
+map("v", ">", ">gv", opts)
 
--- Terminal (built-in :terminal, toggled bottom split)
-local term_buf, term_win = nil, nil
+-- Move selected lines up/down
+map("v", "J", ":m '>+1<CR>gv=gv", opts)
+map("v", "K", ":m '<-2<CR>gv=gv", opts)
 
-local function toggle_terminal()
-  if term_win and vim.api.nvim_win_is_valid(term_win) then
-    vim.api.nvim_win_close(term_win, false)
-    term_win = nil
-    return
-  end
-  if term_buf and vim.api.nvim_buf_is_valid(term_buf) then
-    vim.cmd("botright 15split")
-    term_win = vim.api.nvim_get_current_win()
-    vim.api.nvim_win_set_buf(term_win, term_buf)
-  else
-    vim.cmd("botright 15split term://" .. vim.o.shell)
-    term_win = vim.api.nvim_get_current_win()
-    term_buf = vim.api.nvim_get_current_buf()
-  end
-  vim.cmd("startinsert")
+-- Paste without overwriting register
+map("x", "<leader>p", '"_dP', { desc = "Paste without yank" })
+
+-- System clipboard
+map("n", "<leader>y", '"+y',{ desc = "Yank to clipboard" })
+map("v", "<leader>y", '"+y',{ desc = "Yank to clipboard" })
+map("n", "<leader>Y", '"+Y',{ desc = "Yank line to clipboard" })
+
+-- Delete to void register
+map("n", "<leader>d", '"_d',{ desc = "Delete to void" })
+map("v", "<leader>d", '"_d',{ desc = "Delete to void" })
+
+--window / split
+map("n", "<C-h>", "<C-w>h",opts)
+map("n", "<C-j>", "<C-w>j",opts)
+map("n", "<C-k>", "<C-w>k",opts)
+map("n", "<C-l>", "<C-w>l",opts)
+map("n", "<leader>sv",":vsplit<CR>", { desc = "Vertical split" })
+map("n", "<leader>sh",":split<CR>",{ desc = "Horizontal split" })
+map("n", "<leader>sx",":close<CR>",{ desc = "Close split" })
+map("n", "<leader>so","<C-w>o",{ desc = "Close other splits" })
+map("n", "<leader>s=","<C-w>=",{ desc = "Equal split sizes" })
+
+-- Resize splits with arrows
+map("n", "<C-Up>", ":resize +2<CR>",opts)
+map("n", "<C-Down>", ":resize -2<CR>",opts)
+map("n", "<C-Left>", ":vertical resize +2<CR>", opts)
+map("n", "<C-Right>",":vertical resize -2<CR>", opts)
+
+--Buffer
+map("n", "<leader>bb",":b #<CR>", { desc = "Switch to last buffer" })
+map("n", "<leader>bn",":bnext<CR>",{ desc = "Next buffer" })
+map("n", "<leader>bp",":bprev<CR>",{ desc = "Previous buffer" })
+map("n", "<leader>bd",":bdelete<CR>",{ desc = "Delete buffer" })
+map("n", "<leader>bD",":bdelete!<CR>", { desc = "Force delete buffer" })
+map("n", "<leader>bo",":%bdelete|edit #<CR>",{ desc = "Close other buffers" })
+
+-- Tab
+map("n", "<leader>tn",":tabnew<CR>", { desc = "New tab" })
+map("n", "<leader>tc",":tabclose<CR>", { desc = "Close tab" })
+map("n", "<leader>to",":tabonly<CR>",{ desc = "Close other tabs" })
+map("n", "<leader>tp",":tabprev<CR>",{ desc = "Previous tab" })
+map("n", "<leader>tl",":tabnext<CR>",{ desc = "Next tab" })
+map("n", "<leader>tf",":tabnew %<CR>", { desc = "Open current file in new tab" })
+
+-- tab completion (for native LSP completion popup)
+map("i", "<Tab>", function()
+if vim.fn.pumvisible() == 1 then return "<C-n>" end
+return "<Tab>"
+end, { expr = true })
+
+map("i", "<S-Tab>", function()
+if vim.fn.pumvisible() == 1 then return "<C-p>" end
+return "<S-Tab>"
+end, { expr = true })
+
+-- misc
+-- Toggle quickfix
+map("n", "<leader>q", function()
+local qf = vim.fn.getwininfo()
+for _, w in pairs(qf) do
+if w.quickfix == 1 then vim.cmd.cclose(); return end
 end
+vim.cmd.copen()
+end, { desc = "Toggle quickfix" })
 
-map("n", "<leader>tt", toggle_terminal, { desc = "Toggle terminal" })
-map("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-
--- Go — basic commands
-map("n", "<leader>gr", ":w<CR>:split | terminal go run %<CR>", { silent = true, desc = "Go run current file" })
-map("n", "<leader>gb", ":w<CR>:split | terminal go build ./...<CR>", { silent = true, desc = "Go build" })
-map("n", "<leader>gt", ":w<CR>:split | terminal go test ./...<CR>", { silent = true, desc = "Go test" })
-
--- Docker — basic build command
-map("n", "<leader>db", ":split | terminal docker build -t $(basename $(pwd)) .<CR>",
-  { silent = true, desc = "Docker build" })
+-- Source current file
+map("n", "<leader>xs", ":source %<CR>", { desc = "Source current file" })

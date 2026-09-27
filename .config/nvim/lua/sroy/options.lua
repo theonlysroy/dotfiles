@@ -1,49 +1,53 @@
--- Local scope = applies only to current buffer/window when set
+-- set leader before keymaps
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- EDITOR configs
 local o = vim.opt
 
--- Indentation
-o.tabstop = 2
-o.shiftwidth = 2
-o.expandtab = true
+o.number         = true       -- absolute line number on current line
+o.relativenumber = true       -- relative numbers on other lines
+o.signcolumn     = "yes"      -- always show sign column (prevents jump)
+o.cursorline     = false       -- highlight current line
+o.termguicolors  = true       -- true color support
+o.showmatch      = true       -- highlight matching bracket
+o.matchtime      = 1          -- bracket match blink duration (tenths)
+o.scrolloff      = 8          -- min lines above/below cursor
+o.sidescrolloff  = 8          -- min columns left/right of cursor
+o.wrap           = false      -- no line wrapping
+o.colorcolumn    = "120"      -- ruler at column 120
+o.splitright     = true       -- vertical split goes right
+o.splitbelow     = true       -- horizontal split goes below
+o.laststatus     = 3          -- global statusline
+
+--  Indentation (2 spaces)
+o.tabstop     = 2
+o.shiftwidth  = 2
+o.softtabstop = 2
+o.expandtab   = true
 o.smartindent = true
 
--- Line numbers
-o.number = true
-o.relativenumber = true
+--  search
+o.ignorecase  = true          -- case-insensitive by default
+o.smartcase   = true          -- uppercase in query = case-sensitive
+o.hlsearch    = false         -- no persistent highlight on search
+o.incsearch   = true          -- incremental search
 
--- Search
-o.ignorecase = true
-o.smartcase = true
-o.hlsearch = false
+--  performance
+o.updatetime    = 250         -- faster CursorHold
+o.timeoutlen    = 300         -- key sequence timeout (ms)
+o.lazyredraw    = true        -- don't redraw during macros
+o.synmaxcol     = 200         -- syntax highlighting column limit
+o.undofile      = true        -- persistent undo across sessions
+o.swapfile      = false       -- no swap files
+o.backup        = false       -- no backup files
+o.writebackup   = false       -- no write backup
+o.shortmess:append("I")      -- no intro message
+o.shortmess:append("c")      -- no completion messages
 
--- Appearance
-o.signcolumn = "yes"
-o.cursorline = false
-o.scrolloff = 8
-o.sidescrolloff = 8
+--  clipboard
+o.clipboard = "unnamedplus"   -- system clipboard as default register
 
--- Behavior
-o.undofile = true            -- persistent undo
-o.splitright = true
-o.splitbelow = true
-o.updatetime = 250
-o.timeoutlen = 300
-o.clipboard = "unnamedplus"  -- system clipboard
-o.swapfile = false
-o.backup = false
-
--- Netrw disable (we'll use nvim-tree instead)
-vim.g.loaded_netrw = 1
+--  disable built-in file explorer
+vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
-
--- Filetype detection
-vim.filetype.add({
-  filename = {
-    ["Makefile"] = "make",
-    ["Dockerfile"] = "dockerfile",
-    ["go.work"] = "gowork",
-  },
-  pattern = {
-    ["Dockerfile.*"] = "dockerfile",
-  },
-})
