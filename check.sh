@@ -11,7 +11,8 @@ while read -r name; do
   dst="$(get_field "$name" dst "$LINKS_FILE")"
   target="$HOME/$dst"
   if [ -L "$target" ]; then
-    echo "OK   (symlink): $target -> $(readlink "$target")"
+    # echo "OK   (symlink): $target -> $(readlink "$target")"
+    printf "%-15s %-30s -> %sn\n" "OK (symlink):" "$target" "$(readlink "$target")"
   elif [ -e "$target" ]; then
     echo "WARN (real file, not linked): $target"
   else
