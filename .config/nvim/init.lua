@@ -1,3 +1,5 @@
+vim.env.RIPGREP_CONFIG_PATH = vim.fn.expand("$HOME/.ripgreprc")
+
 vim.g.mapleader = " "
 
 require("sroy.options")
