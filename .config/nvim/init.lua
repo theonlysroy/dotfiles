@@ -1,4 +1,4 @@
-vim.env.RIPGREP_CONFIG_PATH = vim.fn.expand("$HOME/.ripgreprc")
+vim.env.RIPGREP_CONFIG_PATH = vim.fn.expand("$HOME/.config/nvim/rg.conf")
 
 vim.g.mapleader = " "
 
