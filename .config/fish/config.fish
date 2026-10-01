@@ -40,6 +40,15 @@ alias formatss="magick golang-study-130926.png -bordercolor white -border 20x20 
 alias gr="go run ./main.go"
 alias nv="nvim"
 
+# git alias
+alias gits="git status"
+alias gss="git status --short"
+alias glo="git log --oneline"
+alias glg="git log --graph"
+alias gaa="git add ."
+alias gcm="git commit -m"
+
+
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
