@@ -12,7 +12,7 @@ while read -r name; do
   target="$HOME/$dst"
   if [ -L "$target" ]; then
     # echo "OK   (symlink): $target -> $(readlink "$target")"
-    printf "%-15s %-30s -> %sn\n" "OK (symlink):" "$target" "$(readlink "$target")"
+    printf "%-15s %-30s -> %s\n" "OK (symlink):" "$target" "$(readlink "$target")"
   elif [ -e "$target" ]; then
     echo "WARN (real file, not linked): $target"
   else
