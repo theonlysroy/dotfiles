@@ -36,6 +36,9 @@ o.backup = false
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Default background transparent
+vim.g.transparent_background = 1
+
 -- Filetype detection
 vim.filetype.add({
   filename = {
