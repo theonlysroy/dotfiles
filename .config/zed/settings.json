@@ -213,4 +213,13 @@
       "debuggers": ["Delve"],
     },
   },
+  "gutter": {
+    "min_line_number_digits": 0,
+    "line_numbers": false,
+    "runnables": false,
+    "bookmarks": false,
+    "breakpoints": false,
+    "folds": false,
+    "git_gutter_width": "default",
+  },
 }
