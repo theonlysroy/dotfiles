@@ -48,6 +48,10 @@ alias glo="git log --oneline"
 alias glg="git log --graph"
 alias gaa="git add ."
 alias gcm="git commit -m"
+alias gfo="git fetch origin"
+alias gcd="git checkout development"
+alias gm="git merge"
+alias gcmn="git checkout main"
 
 
 # bun
