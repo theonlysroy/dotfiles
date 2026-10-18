@@ -1,0 +1,4 @@
+[[language]]
+name = "go"
+auto-format = true
+language-servers = ["gopls"]
