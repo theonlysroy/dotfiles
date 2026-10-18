@@ -1,4 +1,8 @@
-theme = "base16_terminal"
+theme = "mindark"
 
 [editor.soft-wrap]
 enable = true
+
+[editor]
+gutters = []
+

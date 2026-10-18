@@ -1,0 +1,36 @@
+font_family		family="Adwaita Sans"
+#font_family		family="JetBrainsMono Nerd Font"
+font_size 		10.0
+#background_opacity 	0.95
+linux_display_server 	wayland
+window_margin_width 	0
+tab_bar_style 		powerline
+tab_powerline_style 	round
+hide_window_decorations no
+enabled_layouts 	Tall,*
+remember_window_size	yes
+initial_window_width	212c
+initial_window_height	52c
+cursor_trail		1
+copy_on_select		clipboard
+clipboard_control 	write-clipboard write-primary read-clipboard-ask read-primary-ask
+enable_audio_bell	no
+visual_bell_duration	0.0
+window_alert_on_bell	no	# to fully disable dock/taskbar flashing
+
+#   fixes blurry fonts
+text_composition_strategy 2.0 0
+modify_font cell_height 100%
+
+# Keybinds
+map kitty_mod+enter new_window_with_cwd
+map ctrl+equal change_font_size all +1.0
+map ctrl+minus change_font_size all -1.0
+map ctrl+0 change_font_size all 0
+map ctrl+shift+c copy_to_clipboard
+map ctrl+shift+v paste_from_clipboard
+
+# BEGIN_KITTY_THEME
+# Black Metal
+include current-theme.conf
+# END_KITTY_THEME
