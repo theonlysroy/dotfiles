@@ -39,6 +39,7 @@ alias learnlab="cd $HOME/Lab/Learn_In_Lab"
 alias formatss="magick golang-study-130926.png -bordercolor white -border 20x20 out.png"
 alias gr="go run ./main.go"
 alias nv="nvim"
+alias scrcpy="scrcpy --window-height=850"
 
 # git alias
 alias gits="git status"
