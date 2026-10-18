@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "Starting docker daemon..."
+sudo systemctl restart docker.socket
+sleep 1
+sudo systemctl restart docker.service
+sleep 1
+
+sudo systemctl status docker.socket | head -2
+sudo systemctl status docker.service | head -2
+
+
+echo "Docker running..."

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+echo "Stopping docker daemon..."
+
+sudo systemctl stop docker.socket
+sudo systemctl stop docker.service
+
+sleep 1
+
+sudo systemctl status docker.socket | head -2
+sudo systemctl status docker.service | head -2
+
+
+echo "Docker daemon stopped..."
