@@ -2,3 +2,17 @@
 name = "go"
 auto-format = true
 language-servers = ["gopls"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[[language]]
+name = "python"
+language-servers = ["ty", "ruff"]
+auto-format = true
+formatter = { command = "ruff", args = ["format", "--stdin-filename", "file.py", "-"] }

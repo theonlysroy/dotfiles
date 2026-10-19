@@ -1,8 +1,8 @@
 theme = "mindark"
 
+[editor]
+gutters = ["line-numbers", "spacer"]
+line-number = "relative"
+
 [editor.soft-wrap]
 enable = true
-
-[editor]
-gutters = []
-
