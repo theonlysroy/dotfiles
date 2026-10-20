@@ -3,10 +3,10 @@ font-family = "Maple Mono"
 font-size = 10
 
 # Window
-window-width = 120
-window-height = 35
-window-padding-x = 12
-window-padding-y = 10
+window-width = 195
+window-height = 51
+window-padding-x = 4
+window-padding-y = 4
 window-padding-balance = true
 window-decoration = auto
 window-theme = dark
@@ -24,7 +24,7 @@ cursor-color = #88c0d0
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
-background-opacity = 0.96
+background-opacity = 0.98
 
 # Clipboard (tmux and Helix use OSC 52 to write)
 copy-on-select = false
