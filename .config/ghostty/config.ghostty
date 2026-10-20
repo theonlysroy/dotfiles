@@ -1,0 +1,53 @@
+# Font
+font-family = "Maple Mono"
+font-size = 10
+
+# Window
+window-width = 120
+window-height = 35
+window-padding-x = 12
+window-padding-y = 10
+window-padding-balance = true
+window-decoration = auto
+window-theme = dark
+window-show-tab-bar = never
+confirm-close-surface = false
+gtk-titlebar = true
+gtk-custom-css = ~/.config/ghostty/gtk.css
+
+# Appearance
+background = #17191f
+foreground = #d8dee9
+selection-background = #3b4252
+selection-foreground = #eceff4
+cursor-color = #88c0d0
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+background-opacity = 0.96
+
+# Clipboard (tmux and Helix use OSC 52 to write)
+copy-on-select = false
+clipboard-read = ask
+clipboard-write = allow
+
+# Scrollback (bytes; tmux keeps its own history)
+# scrollback-limit = 5000000
+
+# Palette (Helix's base16_terminal / mindark theme uses these)
+palette = 0=#3b4252
+palette = 1=#bf616a
+palette = 2=#a3be8c
+palette = 3=#ebcb8b
+palette = 4=#81a1c1
+palette = 5=#b48ead
+palette = 6=#88c0d0
+palette = 7=#e5e9f0
+palette = 8=#4c566a
+palette = 9=#bf616a
+palette = 10=#a3be8c
+palette = 11=#ebcb8b
+palette = 12=#81a1c1
+palette = 13=#b48ead
+palette = 14=#8fbcbb
+palette = 15=#eceff4

@@ -1,0 +1,26 @@
+/* shorter headerbar */
+headerbar {
+    min-height: 28px;
+    padding: 0 6px;
+    box-shadow: none;
+}
+
+/* hide every button except the traffic lights (new tab, tab overview, menu) */
+headerbar button:not(.minimize):not(.maximize):not(.close) {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    -gtk-icon-size: 0;
+}
+
+windowcontrols button.minimize,
+windowcontrols button.maximize,
+windowcontrols button.close {
+    min-width: 14px;
+    min-height: 14px;
+    padding: 0px;
+    margin: 0 3px;
+    -gtk-icon-size: 8px;
+}
