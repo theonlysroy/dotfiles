@@ -9,6 +9,8 @@ window-padding-x = 4
 window-padding-y = 4
 window-padding-balance = true
 window-decoration = auto
+#window-title-font-family = "JetBrainsMono Nerd Font"
+window-subtitle = false
 window-theme = dark
 window-show-tab-bar = never
 confirm-close-surface = false
@@ -23,8 +25,10 @@ selection-foreground = #eceff4
 cursor-color = #88c0d0
 cursor-style = block
 cursor-style-blink = false
-shell-integration-features = no-cursor
+#shell-integration = fish
+shell-integration-features = no-cursor,no-title
 background-opacity = 0.98
+title = "fish"
 
 # Clipboard (tmux and Helix use OSC 52 to write)
 copy-on-select = false
