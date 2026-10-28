@@ -1,5 +1,5 @@
 # Font
-font-family = "Maple Mono"
+font-family = "JetBrainsMono Nerd Font"
 font-size = 10
 
 # Window
@@ -27,8 +27,8 @@ cursor-style = block
 cursor-style-blink = false
 #shell-integration = fish
 shell-integration-features = no-cursor,no-title
-background-opacity = 0.98
-title = "fish"
+background-opacity = 0.95
+title = "sroy"
 
 # Clipboard (tmux and Helix use OSC 52 to write)
 copy-on-select = false

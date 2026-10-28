@@ -16,7 +16,7 @@ alias aug="sudo apt upgrade"
 alias lab="cd $HOME/Lab"
 alias github="cd $HOME/github/theonlysroy"
 alias scripts="cd $HOME/Lab/Scripts"
-alias awslab="cd $HOME/Lab/Aws"
+alias awslab="cd $HOME/Lab/devops-aws"
 alias office="cd $HOME/Office"
 alias fe="cd $HOME/Lab/frontend"
 alias be="cd $HOME/Lab/backend"
@@ -53,7 +53,6 @@ alias gcd="git checkout development"
 alias gm="git merge"
 alias gcmn="git checkout main"
 
-
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
@@ -65,7 +64,7 @@ set --export NVM_DIR $HOME/.nvm
 # fish_add_path "$HOME/.opencode/bin"
 
 # java
-set --export JAVA_HOME "/usr/lib/jvm/java-21-openjdk-amd64"
+set --export JAVA_HOME /usr/lib/jvm/java-21-openjdk-amd64
 set --export PATH $JAVA_HOME/bin $PATH
 
 # android sdk
