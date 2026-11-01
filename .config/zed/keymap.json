@@ -3,7 +3,7 @@
     "context": "Editor",
     "bindings": {
       "ctrl-s": "workspace::Save",
-      "ctrl-w": "pane::CloseActiveItem",
+      // "ctrl-w": "pane::CloseActiveItem",
       "ctrl-v": "editor::Paste",
       "ctrl-x": "editor::Cut",
       "ctrl-d": "editor::DuplicateLineDown",
@@ -20,7 +20,8 @@
       // "ctrl-`": "terminal_panel::ToggleFocus",
       "ctrl-alt-b": "workspace::ToggleRightDock",
       "ctrl-b": "workspace::ToggleLeftDock",
-      "ctrl-1": "editor::ToggleFocus",
+      // "ctrl-1": "editor::ToggleFocus",
+      "ctrl-1": "workspace::ActivatePaneLeft",
       "ctrl-2": "workspace::ActivatePaneRight",
       "ctrl-3": "workspace::ActivatePaneUp",
       "ctrl-4": "workspace::ActivatePaneDown",

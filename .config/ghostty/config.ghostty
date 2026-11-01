@@ -27,7 +27,7 @@ cursor-style = block
 cursor-style-blink = false
 #shell-integration = fish
 shell-integration-features = no-cursor,no-title
-background-opacity = 0.95
+#background-opacity = 0.95
 title = "sroy"
 
 # Clipboard (tmux and Helix use OSC 52 to write)
@@ -37,6 +37,7 @@ clipboard-write = allow
 
 # Scrollback (bytes; tmux keeps its own history)
 # scrollback-limit = 5000000
+scrollbar = never
 
 # Palette (Helix's base16_terminal / mindark theme uses these)
 palette = 0=#3b4252

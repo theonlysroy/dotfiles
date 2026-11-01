@@ -6,8 +6,8 @@ sleep 1
 sudo systemctl restart docker.service
 sleep 1
 
-sudo systemctl status docker.socket | head -2
-sudo systemctl status docker.service | head -2
+sudo systemctl status docker.socket | head -3
+sudo systemctl status docker.service | head -3
 
 
 echo "Docker running..."
