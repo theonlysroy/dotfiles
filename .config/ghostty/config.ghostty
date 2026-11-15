@@ -29,7 +29,8 @@ cursor-style-blink = false
 shell-integration-features = no-cursor,no-title
 background-opacity = 0.95
 title = "fish"
-#adjust-cell-width = 8%
+#adjust-cell-width = 10%
+adjust-cell-height = 20%
 
 # Clipboard (tmux and Helix use OSC 52 to write)
 copy-on-select = false
