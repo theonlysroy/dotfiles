@@ -40,6 +40,7 @@ alias formatss="magick golang-study-130926.png -bordercolor white -border 20x20 
 alias gr="go run ./main.go"
 alias nv="nvim"
 alias scrcpy="scrcpy --window-height=850"
+alias golab="cd $HOME/Lab/golang-study"
 
 # git alias
 alias gits="git status"

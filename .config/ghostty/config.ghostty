@@ -3,8 +3,8 @@ font-family = "JetBrainsMono Nerd Font"
 font-size = 10
 
 # Window
-window-width = 195
-window-height = 51
+window-width = 160
+window-height = 44
 window-padding-x = 4
 window-padding-y = 4
 window-padding-balance = true
@@ -27,8 +27,9 @@ cursor-style = block
 cursor-style-blink = false
 #shell-integration = fish
 shell-integration-features = no-cursor,no-title
-#background-opacity = 0.95
-title = "sroy"
+background-opacity = 0.95
+title = "fish"
+#adjust-cell-width = 8%
 
 # Clipboard (tmux and Helix use OSC 52 to write)
 copy-on-select = false

@@ -135,12 +135,15 @@
   // "buffer_font_family": "Red Hat Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   // "buffer_font_family": "Maple Mono NF",
+  // "buffer_font_family": "Martian Mono Condensed",
+  // "buffer_font_weight": 300,
   "terminal": {
     // "font_family": "Maple Mono NF",
     "button": false,
     "font_size": 13.0,
-    "font_family": "JetBrainsMono Nerd Font Mono",
+    // "font_family": "JetBrainsMono Nerd Font Mono",
     // "font_family": "Red Hat Mono",
+    "font_family": "Martian Mono Condensed",
     "scrollbar": {
       "show": "auto",
     },
